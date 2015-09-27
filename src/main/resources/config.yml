@@ -1,0 +1,5 @@
+ban delay seconds: 60
+ban length minutes: 300
+ban message: "&cRIP"
+maximum lines: 3
+automatic deny time seconds: 120

@@ -1,0 +1,17 @@
+name: ${project.name}
+main: ${project.groupId}.${project.artifactId}.Entry
+version: ${project.version}
+author: ghowden/Eluinhost
+database: false
+commands:
+  finalwords:
+    description: Accept or deny someone's final words
+    usage: "THIS COMMAND IS NOT SUPPOSED TO BE RAN DIRECTLY"
+    permission: uhc.finalwords.admin
+permissions:
+  uhc.finalwords.admin:
+    default: op
+    description: usage of /finalwords command and receive notifications
+  uhc.finalwords.bypass:
+    default: op
+    description: Bypass entire plugin bans
