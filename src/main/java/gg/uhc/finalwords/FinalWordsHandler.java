@@ -237,12 +237,12 @@ public class FinalWordsHandler implements Listener {
     public void on(PlayerQuitEvent event) {
         UUID uuid = event.getPlayer().getUniqueId();
 
-        switch (playerStages.get(uuid)) {
-            case WRITING:
-                goToApprove(uuid);
-                break;
-            case COMPLETED:
-                removeTracking(uuid);
+        Stage stage = playerStages.get(uuid);
+
+        if (stage == Stage.WRITING) {
+            goToApprove(uuid);
+        } else if (stage == Stage.COMPLETED) {
+            removeTracking(uuid);
         }
     }
 
